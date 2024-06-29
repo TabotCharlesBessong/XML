@@ -1,0 +1,16 @@
+@startuml signup
+actor User
+participant System
+
+User -> System: Requests login page
+System -> User: Sends login page
+User -> System: Submits login credentials (username, password)
+System -> System: Verifies credentials
+
+alt Credentials are valid
+    System -> User: Sends success message
+else Credentials are invalid
+    System -> User: Sends error message
+end
+
+@enduml
