@@ -1,5 +1,26 @@
 @startuml hello
+header Page Header
+footer Page %page% of %lastpage%
+title Example Title
+skinparam sequenceMessageAlign right
+' skinparam responseMessageBelowArrow true
+participant Participant as Foo
+actor Actor as Foo1
+boundary Boundary as Foo2
+control Control as Foo3
+entity Entity as Foo4
+database Database as Foo5
+collections Collections as Foo6
+queue Queue as Foo7
 
-A -> B : Hello
-
+autonumber
+Foo -> Foo1 : To actor
+Foo -[#00FB0B]-> Foo2 : To boundary
+Foo ->o Foo3 : To control
+Foo3 --> Foo3 : To control engineering
+Foo ->> Foo4 : To entity
+Foo -[#FA9C57]->x Foo5 : To database
+Foo5 --> Foo2 : To boundary
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
 @enduml

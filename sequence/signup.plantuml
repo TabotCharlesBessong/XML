@@ -2,14 +2,18 @@
 actor User
 participant System
 
+autonumber
 User -> System: Requests login page
 System -> User: Sends login page
+autonumber 10
 User -> System: Submits login credentials (username, password)
+autonumber 20
 System -> System: Verifies credentials
 
 alt Credentials are valid
     System -> User: Sends success message
 else Credentials are invalid
+autonumber 27 "<font color=red><b>Error Message"
     System -> User: Sends error message
 end
 
