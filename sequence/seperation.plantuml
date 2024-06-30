@@ -1,4 +1,5 @@
 @startuml seperation
+title seperation
 == Initialization ==
 Alice -> Bob: Authentication Request\nbut i can not wait to send another one
 Bob --> Alice: Authentication Response
