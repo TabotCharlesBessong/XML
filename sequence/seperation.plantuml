@@ -1,0 +1,9 @@
+@startuml seperation
+== Initialization ==
+Alice -> Bob: Authentication Request\nbut i can not wait to send another one
+Bob --> Alice: Authentication Response
+== Repetition ==
+Alice -> Bob: Another authentication Request
+...5 minutes later...
+Alice <-- Bob: another authentication Response
+@enduml
