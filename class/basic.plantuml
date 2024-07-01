@@ -1,0 +1,36 @@
+@startuml notes
+
+rectangle One {
+
+Class01 <|-- Class02
+Class03 "one" *-- "many" Class04 : contains
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+}
+
+' rectangle Two {
+
+' Class11 <|.. Class12
+' Class13 --> Class14
+' Class15 ..> Class16
+' Class17 ..|> Class18
+' Class19 <--* Class20
+' }
+
+' rectangle Three  {
+
+' Class21 #-- Class22
+' Class23 x-- Class24
+' Class25 }-- Class26
+' Class27 +-- Class28
+' Class29 ^-- Class30
+' }
+
+rectangle Four {
+class Car
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+}
+@enduml
