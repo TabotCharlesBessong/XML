@@ -10,9 +10,9 @@ User -> System: Submits login credentials (username, password)
 autonumber 20
 System -> System: Verifies credentials
 
-alt Credentials are valid
+alt#Gold #Green Credentials are valid
     System -> User: Sends success message
-else Credentials are invalid
+else #Pink Credentials are invalid
 autonumber 27 "<font color=red><b>Error Message"
     System -> User: Sends error message
 end
