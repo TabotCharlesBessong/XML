@@ -1,3 +1,8 @@
+
+## UML Diagrams
+
+### Sequence diagram
+
 ref
 
 ![ref](https://www.plantuml.com/plantuml/png/HStB3OD030JGkwjm0Ka3EKGaDT20MGPXoNYHrr1_n4VAzSsCfcifaTjY79XebKWjkeedVqmBI4hMu6yTA31ntH5Ny3YCNwokIQVmyttR3BFwxn_ZVjR6HPm7S7Lgs15YREfe11_Fzmu-Relz0000 "ref")
@@ -10,3 +15,22 @@ skinparam
 padding
 
 ![padding](https://www.plantuml.com/plantuml/png/POn13eCW44Ntd6BYlecmT66iYsxh5GOXBIam18U4uvlKL6sxVU-_FooCcKlmaD0O5nzYURcOC6E02JExsIMCF6qIL7lo8zKFbwtGLA6v4Sb6f2E4gtUpbVz82HiDQAfxgBx3aRJy1KUqtSAbV--WWwVrdaxuNXWweC9YiD6Ku5S0 "padding")
+
+### Use case diagram
+intro
+
+![intro](https://www.plantuml.com/plantuml/png/ROmx2iD034JxFONOnd7X2smHd0Ea2di0OGiYiZyacU3RfzWYIqWtp7ipgngA7Ja15vFgzCMbeM06tApAmyv4W6_Icic5g2G1bkKAbwWqEtz7Bd3RCnSFg3sv2SAt7-se1FOamDOIRsXS-wpZGU_nHvtT1Ful6KvMAlkHqmS0 "intro")
+
+package
+
+![package](https://www.plantuml.com/plantuml/png/JP2nRiCm34HtVWNXgHay9EcK8GXWjrqw60Ro0O9CEK9ioP2e6e6HVo_agd8stZsUSEB5it0SnW4d8U-Y9s3D0s7pfpmCf1ZPejFzZR7JZYHhQq18jWw_0db6uR67bCV6MKNUQsl4W4lQgswauffCklYqjiFAQTQoY419U49yMvX-86p9imXE6CO5WYSfF67n8HXZS4rSg_r66l50PTqhFMoqTjhSattSx9P-DCt9VuSdl1Ie_p-A2vo29tV2CfwYFEDR5yRnyKsATncjryciZMg3OShaEcrsPsUJGMrdiuFOGKaio_FQg4_JFa-7F1tXGgOBu_0B "package")
+
+### Class diagram
+
+notes
+
+![notes](https://www.plantuml.com/plantuml/png/NSxDQiCm44RH_Jp5XximkCZOSdwD2O6KRjj5eRk2I8Oau4WWsKbBudSl8h9IkjES6S5TkqxPhZ-rqAPZHsHvsoczRnblcd4bshJAkQ94SnC2zq46h90OpGao8P2SbFv9mi44DRP6T-geNRYTmiJ_is1pv7cWHQ0bngkoe84enIFeus9yK1hsFcdyNyh85OHOXVSawXHvFkeigW-uZRo8l4GZH7OVP44f_eSSB3F-jCWIJsEtZ2comdVKc2Ad6AB653d7SzHO8fVu6hKA8O-CLzDRN6dhjzWeIo_sU6OBuGVKsFdHOKL-p0G-3ymjQXpKcJ49BWJUsJgZKQE1kMX70wrPx_fJ-mi0 "notes")
+
+methods
+
+![methods](https://www.plantuml.com/plantuml/png/TO_12i9034Jl-Og01rjAVw1uK2Y287hGctXOtTYkx5RTpGgrwhTBjIqLz1OoayoRiMDXsHkDXZW_IGVBtP7sZADx7EF4Mb7EbUDsco1TlD0k2A7JCC6FkjaYQJ9KS2fOV1cSkb4G0korS0vJRqo95SGhjgh8KDRsmVMaP4iHX11rIO_cRAfLbZDM41tUqyAR7LbCS5OmPMGXadIksrXQAqEOO2gO86x2dpyf7m331gXNRjY6_UdMqvllOogaD_e5 "methods")
