@@ -1,0 +1,36 @@
+@startuml packages
+scale 750 width
+package foo1 <<Node>> {
+class Class1
+}
+package foo2 <<Rectangle>> {
+class Class2
+}
+package foo3 <<Folder>> {
+class Class3
+}
+package foo4 <<Frame>> {
+class Class4
+}
+package foo5 <<Cloud>> {
+class Class5
+}
+package foo6 <<Database>> {
+class Class6
+}
+
+class Student {
+Name
+}
+Student "0..*" - "1..*" Course
+(Student, Course) .. Enrollment
+class Enrollment {
+drop()
+cancel()
+}
+
+skinparam stereotypeCBackgroundColor YellowGreen
+Class01 "1" *-- "many" Class02 : contains
+Class03 o-- Class04 : aggregation
+
+@enduml
