@@ -42,3 +42,21 @@ abstractclasses
 packages
 
 ![packages](https://www.plantuml.com/plantuml/png/PS_BQiCm40NG_Np5u5KIQcFdLGWYXBgFNHRjgikfD7LDP8sHP488-VUIrALriX7IdSELj0cHVEmQYotf7LKS86YoZFUB7FUrYL_G3_1Jf42bjc9ulSOZQ4iXO7bU2pZzPrDKwfLr95VP6piTsXagzIpMiB-6io6Sdw6dvgPmFdGBLAgqqfbhjnYw9IhrI94-ADnKBk44_VajTePTn2DigM4umM-Gv5asIJ35fBXiIkbyO1Zryxi-66EMuPFpOct3BlQjVm4UmNXfHsFGv3JRqVXyTzZLhYLF3OR8dYKUMYuVIEygBvqpfLZn-CxMolx5CpkuF3ilC2aIdAGf9WsvG_BpctoAAzJY8jKkz7A6agRzU8uhfAhoN56inG5is9ckiTy0 "packages")
+
+### Activity Diagram
+
+intro
+
+![intro](https://www.plantuml.com/plantuml/png/JSj12eD0343HVKwHfLwXNTHTBr48mOaraCdOIHJiwGjTkVpm_XJ9FVTgg9wzmJz15noUdRVrq2-gHxAPbCU8kOhZS4gCSDjwcoK2sUpbHVdTkSOTn49my7OHpUq4ef3FBZuB4R8N9E8vzT0yYV3oUz458ji6atZPg_q0 "intro")
+
+vertical
+
+![vertical](https://www.plantuml.com/plantuml/png/RSsx3W8X48NXVfvYxDZIIoNDUcdiZJrPXbqI63Om67rxewk52UsVB-VqHKoM6WFUAOiVJ83LdCqO3TP2js-xE4mC7mhUeHeIMoy-CHuwb8aOrPDA1_ihFGJN6YWK-eV71jneA9BcXZurzBOrUsx0tG9HSPB9y_ZhxwY1s7gt_FR4jiRm0W00 "vertical")
+
+switch
+
+![switch](https://www.plantuml.com/plantuml/png/SoWkIImgAStDKIWkpon9pk02yxaW70MDajJY4djDhkJ4ubG53ONa_BoKp9BC_3m5HmLDBgkGr8eI1KDhJ5adkAmH5bbdkAmn5baNkAm95bbNkAofDLTgNWhKqLp59Va5N0wfUIcbkJa0 "switch")
+
+loophole
+
+![loophole](https://www.plantuml.com/plantuml/png/BSf12eGm30NGVKwHfIxc0XOShnB8Hmjf8sb4lFs0pFRnjf4IUJLZSpyFDz0h53WXIKj0b5LI2YqxEa8Ih5Nsa3RAl_5zL0DFpGDl_ivS1qyFnaoVjNiXTAKDNQzcFm00 "loophole")
