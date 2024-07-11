@@ -60,3 +60,11 @@ switch
 loophole
 
 ![loophole](https://www.plantuml.com/plantuml/png/BSf12eGm30NGVKwHfIxc0XOShnB8Hmjf8sb4lFs0pFRnjf4IUJLZSpyFDz0h53WXIKj0b5LI2YqxEa8Ih5Nsa3RAl_5zL0DFpGDl_ivS1qyFnaoVjNiXTAKDNQzcFm00 "loophole")
+
+forking
+
+![forking](https://www.plantuml.com/plantuml/png/SoWkIImgAStDKKZBByhEp4ld0WjmWNXSLed99PdvUGg6rc2-Gc9wOcOUNDJ8cYirBmMiZwku9B-0YoIjM4IDiOgQGAp9JIrAJuNQuv2QbrAQcmC0 "forking")
+
+branches
+
+![branches](https://www.plantuml.com/plantuml/png/TK-xJiGm4Epz5QDjSdTI2eXuLD4r55GKqA3e2b-oKQnpR6IlaVXxb5mCfg1PQMTcPsQFKNIGD5kSWtRzn55Ls1tsgEiMr4_SNs3SHn9I5Pv7qBh0H7noEFl819dOgMezwDuvda2IWeDtcyJ85sqyXUJG-tdMRbWmjf7_ePxSOCOhjplibSgTp0XwzJFZZQDiuNNTTX8Idq2w5-CTRaWjGd_1n25tN58slY7e2DsejS4YVP690wGmjJnASN97Lt5TOFUaUEsvpPLlkr7RM9IvpIhT_BnWTPG_QONhGqxwXHwpXJgo6z9ilm40 "branches")
