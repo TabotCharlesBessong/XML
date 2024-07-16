@@ -1,0 +1,197 @@
+@startuml kido_class
+
+!define primary_key(x) <b>x</b>
+!define foreign_key(x) <u>x</u>
+
+' skinparam class {
+'   Fontsize 20
+' }
+
+' skinparam entity {
+'   Fontsize 18
+' }
+
+
+package "Database Models" {
+    class UserModel {
+        primary_key(id: UUID)
+        username: string
+        password: string
+        email: string
+        role: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class PatientModel {
+        primary_key(id: UUID)
+        foreign_key(userId: UUID)
+        gender: string
+        age: int
+        address1: string
+        address2: string
+        occupation: string
+        phoneNumber: string
+        tribe: string
+        religion: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class DoctorModel {
+        primary_key(id: UUID)
+        foreign_key(userId: UUID)
+        specialty: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class AppointmentModel {
+        primary_key(id: UUID)
+        foreign_key(patientId: UUID)
+        foreign_key(doctorId: UUID)
+        foreign_key(timeslotId: UUID)
+        date: Date
+        reason: string
+        status: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class CallModel {
+        primary_key(id: UUID)
+        foreign_key(appointmentId: UUID)
+        startTime: Date
+        endTime: Date
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class CommentModel {
+        primary_key(id: UUID)
+        foreign_key(postId: UUID)
+        foreign_key(userId: UUID)
+        content: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class ConsultationModel {
+        primary_key(id: UUID)
+        foreign_key(patientId: UUID)
+        foreign_key(doctorId: UUID)
+        details: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class LikeModel {
+        primary_key(id: UUID)
+        foreign_key(postId: UUID)
+        foreign_key(userId: UUID)
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class MedicationModel {
+        primary_key(id: UUID)
+        name: string
+        dosage: string
+        frequency: string
+        duration: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class MessageModel {
+        primary_key(id: UUID)
+        foreign_key(senderId: UUID)
+        foreign_key(receiverId: UUID)
+        content: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class NotificationModel {
+        primary_key(id: UUID)
+        foreign_key(userId: UUID)
+        type: string
+        message: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class PostModel {
+        primary_key(id: UUID)
+        foreign_key(doctorId: UUID)
+        title: string
+        description: string
+        imageUrl: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class PrescriptionModel {
+        primary_key(id: UUID)
+        foreign_key(consultationId: UUID)
+        medications: string
+        instructions: string
+        investigations: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class TimeSlotModel {
+        primary_key(id: UUID)
+        foreign_key(doctorId: UUID)
+        startTime: Date
+        endTime: Date
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class TokenModel {
+        primary_key(id: UUID)
+        foreign_key(userId: UUID)
+        token: string
+        createdAt: Date
+        updatedAt: Date
+    }
+
+    class VitalSignModel {
+        primary_key(id: UUID)
+        foreign_key(patientId: UUID)
+        temperature: float
+        bloodPressure: string
+        pulseRate: int
+        respirationRate: int
+        createdAt: Date
+        updatedAt: Date
+    }
+}
+
+UserModel --> PatientModel : "has one"
+UserModel --> DoctorModel : "has one"
+UserModel --> NotificationModel : "has many"
+UserModel --> MessageModel : "has many sent"
+UserModel --> MessageModel : "has many received"
+UserModel --> CommentModel : "has many"
+UserModel --> LikeModel : "has many"
+
+PatientModel --> AppointmentModel : "has many"
+PatientModel --> ConsultationModel : "has many"
+PatientModel --> VitalSignModel : "has many"
+
+DoctorModel --> AppointmentModel : "has many"
+DoctorModel --> ConsultationModel : "has many"
+DoctorModel --> PostModel : "has many"
+DoctorModel --> TimeSlotModel : "has many"
+
+AppointmentModel --> CallModel : "has one"
+
+ConsultationModel --> PrescriptionModel : "has one"
+
+PostModel --> CommentModel : "has many"
+PostModel --> LikeModel : "has many"
+
+@enduml
