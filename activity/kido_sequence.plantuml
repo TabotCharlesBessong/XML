@@ -1,0 +1,38 @@
+@startuml kido_activity
+|User|
+start
+:Signup;
+:Login;
+
+if (Is Patient?) then (yes)
+    :Complete Patient Profile;
+else (no)
+    :Register as Doctor;
+endif
+
+:Login;
+
+if (User is Patient?) then (yes)
+    if (Available Timeslot?) then (yes)
+        :Book Appointment;
+    endif
+    :Messages Between Patient and Doctor;
+    :Call Between Patient and Doctor;
+    stop
+else (User is Doctor?)
+    :Create Available Time Slot;
+    while (Has Appointment?)
+        :Consult Patient;
+        :Record Patient Vital Signs;
+        if (Need Test?) then (yes)
+            :Give Patient Test;
+        endif
+        if (Need Prescription?) then (yes)
+            :Prescribe to Patient;
+        endif
+    endwhile
+    :Messages Between Patient and Doctor;
+    :Call Between Patient and Doctor;
+    stop
+endif
+@enduml

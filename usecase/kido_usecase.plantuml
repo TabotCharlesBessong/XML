@@ -1,0 +1,62 @@
+@startuml kido_use
+
+skinparam usecase {
+  FontSize 16
+}
+
+actor User
+actor Patient
+actor Doctor
+
+Patient --|> User
+Doctor --|> User
+
+package "Use Case Diagram" {
+  skinparam Package {
+    BackgroundColor<<UseCaseDiagram>> #ADD8E6
+    BorderColor<<UseCaseDiagram>> black
+    BorderThickness 2
+    FontSize 16
+    Margin 20
+    Padding 20
+    StereotypeFontSize 14
+    Height 600 // Increased height
+  }
+
+  usecase "Signup" as UC_Signup
+  usecase "Login" as UC_Login
+  usecase "Complete Patient Profile" as UC_CompleteProfile
+  usecase "Register as Doctor" as UC_RegisterDoctor
+  usecase "Book Appointment" as UC_BookAppointment
+  usecase "Create Available Time Slot" as UC_CreateTimeSlot
+  usecase "Consult Patient" as UC_Consult
+  usecase "Record Patient Vital Signs" as UC_RecordVitals
+  usecase "Give Patient Test" as UC_GiveTest
+  usecase "Prescribe to Patient" as UC_Prescribe
+  usecase "Messages Between Patient and Doctor" as UC_Messages
+  usecase "Call Between Patient and Doctor" as UC_Call
+
+  Patient --> UC_Signup
+  Patient --> UC_Login
+  Patient --> UC_CompleteProfile
+  Patient --> UC_BookAppointment
+  Patient --> UC_Messages
+  Patient --> UC_Call
+
+  Doctor --> UC_Login
+  Doctor --> UC_RegisterDoctor
+  Doctor --> UC_CreateTimeSlot
+  Doctor --> UC_Consult
+  Doctor --> UC_RecordVitals
+  Doctor --> UC_GiveTest
+  Doctor --> UC_Prescribe
+  Doctor --> UC_Messages
+  Doctor --> UC_Call
+
+  UC_BookAppointment <|-- UC_Consult : <<include>>
+  UC_Consult <|-- UC_RecordVitals : <<include>>
+  UC_Consult <|-- UC_GiveTest : <<include>>
+  UC_Consult <|-- UC_Prescribe : <<include>>
+}
+
+@enduml
