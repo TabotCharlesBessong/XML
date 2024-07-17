@@ -1,0 +1,172 @@
+@startuml kido_er
+entity User {
+    +id: UUID
+    +username: String
+    +password: String
+    +email: String
+    +role: String
+    +firstName: String
+    +lastName: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Patient {
+    +id: UUID
+    +userId: UUID
+    +gender: String
+    +age: Integer
+    +address1: String
+    +address2: String
+    +occupation: String
+    +phoneNumber: String
+    +tribe: String
+    +religion: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Doctor {
+    +id: UUID
+    +userId: UUID
+    +specialization: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Appointment {
+    +id: UUID
+    +patientId: UUID
+    +doctorId: UUID
+    +timeslotId: UUID
+    +date: Date
+    +reason: String
+    +status: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Timeslot {
+    +id: UUID
+    +doctorId: UUID
+    +startTime: Date
+    +endTime: Date
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Consultation {
+    +id: UUID
+    +appointmentId: UUID
+    +presentingComplaints: String
+    +pastHistory: String
+    +diagnosticImpressions: String
+    +investigations: String
+    +treatmentDetails: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity VitalSign {
+    +id: UUID
+    +appointmentId: UUID
+    +temperature: Float
+    +heartRate: Integer
+    +bloodPressure: String
+    +respiratoryRate: Integer
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Prescription {
+    +id: UUID
+    +consultationId: UUID
+    +medicationName: String
+    +dosage: String
+    +frequency: String
+    +duration: String
+    +instructions: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Post {
+    +id: UUID
+    +doctorId: UUID
+    +title: String
+    +description: String
+    +imageUrl: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Comment {
+    +id: UUID
+    +postId: UUID
+    +userId: UUID
+    +content: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Like {
+    +id: UUID
+    +postId: UUID
+    +userId: UUID
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Notification {
+    +id: UUID
+    +userId: UUID
+    +message: String
+    +isRead: Boolean
+    +appointmentId: UUID
+    +messageId: UUID
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Message {
+    +id: UUID
+    +senderId: UUID
+    +receiverId: UUID
+    +content: String
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+entity Call {
+    +id: UUID
+    +doctorId: UUID
+    +patientId: UUID
+    +appointmentId: UUID
+    +startTime: Date
+    +endTime: Date
+    +createdAt: Date
+    +updatedAt: Date
+}
+
+User ||--|| Patient: has_one
+User ||--|| Doctor: has_one
+Patient ||--o{ Appointment: has_many
+Doctor ||--o{ Appointment: has_many
+Doctor ||--o{ Timeslot: has_many
+Appointment ||--|| Consultation: has_one
+Appointment ||--|| VitalSign: has_one
+Consultation ||--|| Prescription: has_one
+Doctor ||--o{ Post: has_many
+Post ||--o{ Comment: has_many
+User ||--o{ Comment: writes
+Post ||--o{ Like: has_many
+User ||--o{ Like: likes
+User ||--o{ Notification: receives
+Notification ||--|| Appointment: notifies_about
+Notification ||--|| Message: notifies_about
+User ||--o{ Message: sends
+User ||--o{ Message: receives
+Doctor ||--o{ Call: makes
+Patient ||--o{ Call: receives
+Appointment ||--|| Call: has
+@enduml
